@@ -36,6 +36,7 @@ Partial Class frmMain
         '
         'pnlMain
         '
+        Me.pnlMain.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlMain.Location = New System.Drawing.Point(225, 0)
         Me.pnlMain.Name = "pnlMain"
@@ -53,10 +54,10 @@ Partial Class frmMain
         Me.BunifuGradientPanel1.Controls.Add(Me.btnDashboard)
         Me.BunifuGradientPanel1.Controls.Add(Me.PictureBox1)
         Me.BunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.BunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(103, Byte), Integer))
-        Me.BunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(103, Byte), Integer))
-        Me.BunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.BunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Indigo
+        Me.BunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Indigo
+        Me.BunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Indigo
+        Me.BunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Indigo
         Me.BunifuGradientPanel1.Location = New System.Drawing.Point(0, 0)
         Me.BunifuGradientPanel1.Name = "BunifuGradientPanel1"
         Me.BunifuGradientPanel1.Quality = 10

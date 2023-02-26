@@ -11,6 +11,7 @@ Public Class frmLogin
         ds = New DataSet
         da.Fill(ds, "tblUser")
 
+        'read the column and store on variables
         Dim dr As OleDbDataReader = cmd.ExecuteReader
         Dim username As String = ""
         Dim fullname As String = ""
@@ -22,13 +23,14 @@ Public Class frmLogin
             usertype = dr("type").ToString
         End While
 
+        'check if rows exist
         If ds.Tables("tblUser").Rows.Count = 1 Then
             If usertype = "Admin" Then
-                MsgBox("Welcome " & usertype & ", " & fullname)
+                MsgBox("Welcome " & usertype & ", " & fullname, MsgBoxStyle.Information, "Successfully login!")
                 frmSettings.lblDisplayUser.Text = "Welcome " & usertype & ", " & fullname & "!"
-                frmStudProfile.lblDisplayUser.Text = "Wlecome " & usertype & ", " & fullname & "!"
+                frmStudProfile.lblDisplayUser.Text = "Welcome " & usertype & ", " & fullname & "!"
             ElseIf usertype = "User" Then
-                MsgBox("Welcome " & usertype & ", " & fullname)
+                MsgBox("Welcome " & usertype & ", " & fullname, MsgBoxStyle.Information, "Successfully login!")
                 frmSettings.lblDisplayUser.Text = "Welcome " & usertype & ", " & fullname & "!"
                 frmStudProfile.lblDisplayUser.Text = "Welcome " & usertype & ", " & fullname & "!"
             End If
@@ -52,6 +54,9 @@ Public Class frmLogin
     End Sub
 
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        'remove the border
+        Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         '3s
         Timer1.Interval = 2500
         Timer1.Start()
@@ -59,7 +64,7 @@ Public Class frmLogin
     Private counter As Integer = 0
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
-
+        'changing image
         Select Case counter
             Case 0
                 PictureBox1.Image = Image.FromFile("5.png")
@@ -88,4 +93,13 @@ Public Class frmLogin
         Me.Close()
     End Sub
 
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+        PictureBox4.Image = Image.FromFile("eye.png")
+        txtPassword.PasswordChar = ""
+    End Sub
+
+    Private Sub PictureBox4_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox4.MouseLeave
+        txtPassword.PasswordChar = "*"
+        PictureBox4.Image = Image.FromFile("hideneye.png")
+    End Sub
 End Class

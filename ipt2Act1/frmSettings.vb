@@ -53,6 +53,9 @@ Public Class frmSettings
         Finally
             conn.Close()
         End Try
+
+        GroupBox1.FlatStyle = FlatStyle.Flat
+
     End Sub
 
     Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
@@ -130,5 +133,10 @@ Public Class frmSettings
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Close()
 
+    End Sub
+
+    
+    Private Sub btnExit_MouseHover(sender As Object, e As EventArgs) Handles btnExit.MouseHover
+        btnExit.BackColor = Color.Red
     End Sub
 End Class

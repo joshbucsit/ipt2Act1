@@ -24,7 +24,10 @@ Partial Class frmLogin
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.pnlMainLogin = New Bunifu.Framework.UI.BunifuGradientPanel()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnNewUser = New System.Windows.Forms.Button()
         Me.btnForgotPassword = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -36,18 +39,21 @@ Partial Class frmLogin
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pnlMainLogin.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'Timer1
+        '
         '
         'pnlMainLogin
         '
         Me.pnlMainLogin.BackgroundImage = CType(resources.GetObject("pnlMainLogin.BackgroundImage"), System.Drawing.Image)
         Me.pnlMainLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pnlMainLogin.Controls.Add(Me.PictureBox4)
         Me.pnlMainLogin.Controls.Add(Me.PictureBox1)
         Me.pnlMainLogin.Controls.Add(Me.btnNewUser)
         Me.pnlMainLogin.Controls.Add(Me.btnForgotPassword)
@@ -70,6 +76,28 @@ Partial Class frmLogin
         Me.pnlMainLogin.Quality = 10
         Me.pnlMainLogin.Size = New System.Drawing.Size(995, 553)
         Me.pnlMainLogin.TabIndex = 1
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.ipt2Act1.My.Resources.Resources.hideneyeblack
+        Me.PictureBox4.Location = New System.Drawing.Point(891, 272)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(33, 29)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox4.TabIndex = 33
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Image = Global.ipt2Act1.My.Resources.Resources.bsitnewlogo
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 37)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(469, 474)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'btnNewUser
         '
@@ -220,21 +248,6 @@ Partial Class frmLogin
         Me.Label1.TabIndex = 23
         Me.Label1.Text = "Log In"
         '
-        'Timer1
-        '
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Image = Global.ipt2Act1.My.Resources.Resources.bsitnewlogo
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 37)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(469, 474)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -249,9 +262,10 @@ Partial Class frmLogin
         Me.Text = "Log In"
         Me.pnlMainLogin.ResumeLayout(False)
         Me.pnlMainLogin.PerformLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -269,4 +283,5 @@ Partial Class frmLogin
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
 End Class

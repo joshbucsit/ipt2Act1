@@ -58,10 +58,10 @@ Partial Class frmSettings
         Me.GroupBox1.Controls.Add(Me.txtUsername)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.ForeColor = System.Drawing.Color.Lavender
-        Me.GroupBox1.Location = New System.Drawing.Point(6, 101)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.Indigo
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 101)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1009, 524)
+        Me.GroupBox1.Size = New System.Drawing.Size(1009, 558)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "User Accounts"
@@ -72,7 +72,7 @@ Partial Class frmSettings
         Me.dgUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgUsers.Location = New System.Drawing.Point(18, 187)
         Me.dgUsers.Name = "dgUsers"
-        Me.dgUsers.Size = New System.Drawing.Size(982, 330)
+        Me.dgUsers.Size = New System.Drawing.Size(982, 365)
         Me.dgUsers.TabIndex = 11
         '
         'cmdAccountType
@@ -87,6 +87,8 @@ Partial Class frmSettings
         '
         'btnDelete
         '
+        Me.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDelete.ForeColor = System.Drawing.Color.Indigo
         Me.btnDelete.Location = New System.Drawing.Point(815, 121)
         Me.btnDelete.Name = "btnDelete"
@@ -98,7 +100,7 @@ Partial Class frmSettings
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.ForeColor = System.Drawing.Color.Lavender
+        Me.Label3.ForeColor = System.Drawing.Color.Indigo
         Me.Label3.Location = New System.Drawing.Point(416, 128)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(142, 23)
@@ -116,7 +118,7 @@ Partial Class frmSettings
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.ForeColor = System.Drawing.Color.Lavender
+        Me.Label4.ForeColor = System.Drawing.Color.Indigo
         Me.Label4.Location = New System.Drawing.Point(14, 128)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(99, 23)
@@ -125,6 +127,8 @@ Partial Class frmSettings
         '
         'btnNew
         '
+        Me.btnNew.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNew.ForeColor = System.Drawing.Color.Indigo
         Me.btnNew.Location = New System.Drawing.Point(815, 50)
         Me.btnNew.Name = "btnNew"
@@ -145,7 +149,7 @@ Partial Class frmSettings
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.ForeColor = System.Drawing.Color.Lavender
+        Me.Label2.ForeColor = System.Drawing.Color.Indigo
         Me.Label2.Location = New System.Drawing.Point(416, 57)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(101, 23)
@@ -163,7 +167,7 @@ Partial Class frmSettings
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.ForeColor = System.Drawing.Color.Lavender
+        Me.Label1.ForeColor = System.Drawing.Color.Indigo
         Me.Label1.Location = New System.Drawing.Point(14, 57)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(108, 23)
@@ -175,7 +179,7 @@ Partial Class frmSettings
         Me.lblDisplayUser.AutoSize = True
         Me.lblDisplayUser.BackColor = System.Drawing.Color.Transparent
         Me.lblDisplayUser.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDisplayUser.ForeColor = System.Drawing.Color.Lavender
+        Me.lblDisplayUser.ForeColor = System.Drawing.Color.Indigo
         Me.lblDisplayUser.Location = New System.Drawing.Point(9, 34)
         Me.lblDisplayUser.Name = "lblDisplayUser"
         Me.lblDisplayUser.Size = New System.Drawing.Size(164, 38)
@@ -190,14 +194,14 @@ Partial Class frmSettings
         Me.pnlSettings.Controls.Add(Me.lblDisplayUser)
         Me.pnlSettings.Controls.Add(Me.GroupBox1)
         Me.pnlSettings.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlSettings.GradientBottomLeft = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(103, Byte), Integer))
-        Me.pnlSettings.GradientBottomRight = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(103, Byte), Integer))
-        Me.pnlSettings.GradientTopLeft = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.pnlSettings.GradientTopRight = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.pnlSettings.GradientBottomLeft = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.pnlSettings.GradientBottomRight = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.pnlSettings.GradientTopLeft = System.Drawing.Color.LightSteelBlue
+        Me.pnlSettings.GradientTopRight = System.Drawing.Color.Lavender
         Me.pnlSettings.Location = New System.Drawing.Point(0, 0)
         Me.pnlSettings.Name = "pnlSettings"
         Me.pnlSettings.Quality = 10
-        Me.pnlSettings.Size = New System.Drawing.Size(1028, 645)
+        Me.pnlSettings.Size = New System.Drawing.Size(1035, 671)
         Me.pnlSettings.TabIndex = 2
         '
         'btnExit
@@ -207,7 +211,7 @@ Partial Class frmSettings
         Me.btnExit.FlatAppearance.BorderSize = 0
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnExit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.ForeColor = System.Drawing.Color.White
+        Me.btnExit.ForeColor = System.Drawing.Color.Indigo
         Me.btnExit.Location = New System.Drawing.Point(979, 0)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(49, 30)
@@ -219,9 +223,8 @@ Partial Class frmSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1028, 645)
+        Me.ClientSize = New System.Drawing.Size(1035, 671)
         Me.Controls.Add(Me.pnlSettings)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmSettings"
         Me.Text = "Account Settings"
         Me.GroupBox1.ResumeLayout(False)

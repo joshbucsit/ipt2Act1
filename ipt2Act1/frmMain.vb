@@ -72,4 +72,8 @@ Public Class frmMain
         frmStudProfile.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
 
     End Sub
+
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+    End Sub
 End Class

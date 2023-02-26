@@ -6,125 +6,138 @@ ipt2Act1
 </name>
 </assembly>
 <members>
-<member name="T:ipt2Act1.My.Resources.Resources">
-<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member>
 <member name="P:ipt2Act1.My.Resources.Resources.ResourceManager">
-<summary>
+	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources.Culture">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.Culture">
+	<summary>
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources._exit">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources._exit">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources._set">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources._set">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources.add_friend">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.add_friend">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources.add_indigo">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.add_indigo">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources.bsitnewlogo">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.bsitnewlogo">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources.CAST_logo__1_">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.camera">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources.delete">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.CAST_logo__1_">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources.delete_indigo">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.delete">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources.edit_indigo">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.delete_indigo">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources.edit_tool">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.download">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources.icons8_analytics_64">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.edit_indigo">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources.icons8_password_key_100">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.edit_tool">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources.icons8_password_key_50">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.eyehidden">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources.icons8_secure_60">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.hideneyeblack">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources.icons8_user_64">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.icons8_analytics_64">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources.icons8_users_68">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.icons8_password_key_100">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources.logout_indigo">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.icons8_password_key_50">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources.Meteor">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.icons8_secure_60">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources.omsc_logo">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.icons8_user_64">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources.prof_white2">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.icons8_users_68">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:ipt2Act1.My.Resources.Resources.settings">
-<summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.logout_indigo">
+	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.Meteor">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.omsc_logo">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.print_Indigo">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.print_Indigo1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.prof_white2">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.search_indigo">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.search_indigo1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.settings">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:ipt2Act1.My.Resources.Resources.user__1_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:ipt2Act1.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
 </member>
 </members>

@@ -1,4 +1,6 @@
 ﻿Imports System.Data.OleDb
+Imports System.IO
+
 Public Class frmStudProfile
 
     Function loadStudents()
@@ -97,6 +99,7 @@ Public Class frmStudProfile
 
     Private Sub btnStudAdd_Click(sender As Object, e As EventArgs) Handles btnStudAdd.Click
         frmRegistration.Show()
+        frmRegistration.pbStudphoto.Image = My.Resources.user__1_
         frmRegistration.txtStudentID.Text = ""
         frmRegistration.txtFullname.Text = ""
         frmRegistration.txtAddress.Text = ""
@@ -118,6 +121,10 @@ Public Class frmStudProfile
         If msgSave = MsgBoxResult.Yes Then
             connect()
             cmd.ExecuteNonQuery()
+        End If
+        'Deletes the photo ID of the student
+        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\StudentID\" & frmRegistration.txtStudentID.Text & ".jpg") = True Then
+            Kill(Application.StartupPath & "\StudentID\" & frmRegistration.txtStudentID.Text & ".jpg")
         End If
         loadStudents()
     End Sub
@@ -148,17 +155,54 @@ Public Class frmStudProfile
         frmRegistration.dtDoR.Text = dgStudent.CurrentRow.Cells(8).Value.ToString
         frmRegistration.txtUnits.Text = dgStudent.CurrentRow.Cells(9).Value.ToString
 
-       
+        'Display the picture of the student
+        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\StudentID\" & frmRegistration.txtStudentID.Text & ".jpg") = False Then
+            frmRegistration.pbStudphoto.Image = My.Resources.user__1_
+            Exit Sub
+        End If
+
+        'Set the picture to the picture box
+        Dim savepicture As String
+        savepicture = Application.StartupPath & "\StudentID\" & frmRegistration.txtStudentID.Text & ".jpg"
+
+        Dim fs As System.IO.FileStream
+        fs = New System.IO.FileStream(savepicture, IO.FileMode.Open, IO.FileAccess.Read)
+        frmRegistration.pbStudphoto.Image = System.Drawing.Image.FromStream(fs)
+        fs.Dispose()
 
     End Sub
 
     Private Sub btnStudUpdate_Click(sender As Object, e As EventArgs) Handles btnStudUpdate.Click
         frmRegistration.Show()
         frmRegistration.btnRegAdd.Text = "Update"
+        frmRegistration.lblDisplayUser.Text = "Update Student Data"
 
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
     End Sub
+
+    
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        If cbFilter.Text = "Name" Then
+            Dim da As New OleDbDataAdapter("Select * from tblStudent Where fullName like '%" & txtSearch.Text & "%' order by ID asc", conn)
+            Dim dset As New DataSet
+            da.Fill(dset, "tblStudent")
+            dgStudent.DataSource = dset.Tables("tblStudent").DefaultView
+        ElseIf cbFilter.Text = "Address" Then
+            Dim da As New OleDbDataAdapter("Select * from tblStudent Where address like '%" & txtSearch.Text & "%' order by ID asc", conn)
+            Dim dset As New DataSet
+            da.Fill(dset, "tblStudent")
+            dgStudent.DataSource = dset.Tables("tblStudent").DefaultView
+        ElseIf cbFilter.Text = "Student ID" Then
+            Dim da As New OleDbDataAdapter("Select * from tblStudent Where student_ID like '%" & txtSearch.Text & "%' order by ID asc", conn)
+            Dim dset As New DataSet
+            da.Fill(dset, "tblStudent")
+            dgStudent.DataSource = dset.Tables("tblStudent").DefaultView
+        End If
+
+
+    End Sub
+
 End Class
