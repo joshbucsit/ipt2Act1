@@ -23,6 +23,10 @@ Partial Class frmSettings
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSettings))
+        Me.pnlSettings = New Bunifu.Framework.UI.BunifuGradientPanel()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.lblDisplayUser = New System.Windows.Forms.Label()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.dgUsers = New System.Windows.Forms.DataGridView()
         Me.cmdAccountType = New System.Windows.Forms.ComboBox()
@@ -35,13 +39,68 @@ Partial Class frmSettings
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblDisplayUser = New System.Windows.Forms.Label()
-        Me.pnlSettings = New Bunifu.Framework.UI.BunifuGradientPanel()
-        Me.btnExit = New System.Windows.Forms.Button()
+        Me.pnlSettings.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgUsers, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlSettings.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'pnlSettings
+        '
+        Me.pnlSettings.BackgroundImage = CType(resources.GetObject("pnlSettings.BackgroundImage"), System.Drawing.Image)
+        Me.pnlSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pnlSettings.Controls.Add(Me.GroupBox2)
+        Me.pnlSettings.Controls.Add(Me.GroupBox1)
+        Me.pnlSettings.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlSettings.GradientBottomLeft = System.Drawing.Color.Lavender
+        Me.pnlSettings.GradientBottomRight = System.Drawing.Color.Lavender
+        Me.pnlSettings.GradientTopLeft = System.Drawing.Color.Lavender
+        Me.pnlSettings.GradientTopRight = System.Drawing.Color.Lavender
+        Me.pnlSettings.Location = New System.Drawing.Point(0, 0)
+        Me.pnlSettings.Name = "pnlSettings"
+        Me.pnlSettings.Quality = 10
+        Me.pnlSettings.Size = New System.Drawing.Size(1035, 671)
+        Me.pnlSettings.TabIndex = 2
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.BackColor = System.Drawing.Color.Indigo
+        Me.GroupBox2.Controls.Add(Me.lblDisplayUser)
+        Me.GroupBox2.Controls.Add(Me.btnExit)
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 3)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(1029, 78)
+        Me.GroupBox2.TabIndex = 32
+        Me.GroupBox2.TabStop = False
+        '
+        'lblDisplayUser
+        '
+        Me.lblDisplayUser.AutoSize = True
+        Me.lblDisplayUser.BackColor = System.Drawing.Color.Transparent
+        Me.lblDisplayUser.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDisplayUser.ForeColor = System.Drawing.Color.Lavender
+        Me.lblDisplayUser.Location = New System.Drawing.Point(22, 16)
+        Me.lblDisplayUser.Name = "lblDisplayUser"
+        Me.lblDisplayUser.Size = New System.Drawing.Size(164, 38)
+        Me.lblDisplayUser.TabIndex = 1
+        Me.lblDisplayUser.Text = "Welcome"
+        '
+        'btnExit
+        '
+        Me.btnExit.BackColor = System.Drawing.Color.Transparent
+        Me.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Lavender
+        Me.btnExit.FlatAppearance.BorderSize = 0
+        Me.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
+        Me.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExit.ForeColor = System.Drawing.Color.Lavender
+        Me.btnExit.Location = New System.Drawing.Point(971, 9)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(49, 30)
+        Me.btnExit.TabIndex = 31
+        Me.btnExit.Text = "X"
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'GroupBox1
         '
@@ -70,6 +129,7 @@ Partial Class frmSettings
         '
         Me.dgUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgUsers.GridColor = System.Drawing.Color.Lavender
         Me.dgUsers.Location = New System.Drawing.Point(18, 187)
         Me.dgUsers.Name = "dgUsers"
         Me.dgUsers.Size = New System.Drawing.Size(982, 365)
@@ -83,7 +143,7 @@ Partial Class frmSettings
         Me.cmdAccountType.Location = New System.Drawing.Point(575, 125)
         Me.cmdAccountType.Name = "cmdAccountType"
         Me.cmdAccountType.Size = New System.Drawing.Size(209, 31)
-        Me.cmdAccountType.TabIndex = 10
+        Me.cmdAccountType.TabIndex = 4
         '
         'btnDelete
         '
@@ -93,7 +153,7 @@ Partial Class frmSettings
         Me.btnDelete.Location = New System.Drawing.Point(815, 121)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(185, 37)
-        Me.btnDelete.TabIndex = 9
+        Me.btnDelete.TabIndex = 5
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
@@ -110,10 +170,11 @@ Partial Class frmSettings
         'txtFullname
         '
         Me.txtFullname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtFullname.ForeColor = System.Drawing.Color.Indigo
         Me.txtFullname.Location = New System.Drawing.Point(128, 126)
         Me.txtFullname.Name = "txtFullname"
         Me.txtFullname.Size = New System.Drawing.Size(254, 31)
-        Me.txtFullname.TabIndex = 6
+        Me.txtFullname.TabIndex = 3
         '
         'Label4
         '
@@ -133,18 +194,19 @@ Partial Class frmSettings
         Me.btnNew.Location = New System.Drawing.Point(815, 50)
         Me.btnNew.Name = "btnNew"
         Me.btnNew.Size = New System.Drawing.Size(185, 37)
-        Me.btnNew.TabIndex = 4
+        Me.btnNew.TabIndex = 6
         Me.btnNew.Text = "New"
         Me.btnNew.UseVisualStyleBackColor = True
         '
         'txtPassword
         '
         Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtPassword.ForeColor = System.Drawing.Color.Indigo
         Me.txtPassword.Location = New System.Drawing.Point(530, 55)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(254, 31)
-        Me.txtPassword.TabIndex = 3
+        Me.txtPassword.TabIndex = 2
         '
         'Label2
         '
@@ -159,6 +221,7 @@ Partial Class frmSettings
         'txtUsername
         '
         Me.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtUsername.ForeColor = System.Drawing.Color.Indigo
         Me.txtUsername.Location = New System.Drawing.Point(128, 55)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(254, 31)
@@ -174,51 +237,6 @@ Partial Class frmSettings
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Username:"
         '
-        'lblDisplayUser
-        '
-        Me.lblDisplayUser.AutoSize = True
-        Me.lblDisplayUser.BackColor = System.Drawing.Color.Transparent
-        Me.lblDisplayUser.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDisplayUser.ForeColor = System.Drawing.Color.Indigo
-        Me.lblDisplayUser.Location = New System.Drawing.Point(9, 34)
-        Me.lblDisplayUser.Name = "lblDisplayUser"
-        Me.lblDisplayUser.Size = New System.Drawing.Size(164, 38)
-        Me.lblDisplayUser.TabIndex = 1
-        Me.lblDisplayUser.Text = "Welcome"
-        '
-        'pnlSettings
-        '
-        Me.pnlSettings.BackgroundImage = CType(resources.GetObject("pnlSettings.BackgroundImage"), System.Drawing.Image)
-        Me.pnlSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pnlSettings.Controls.Add(Me.btnExit)
-        Me.pnlSettings.Controls.Add(Me.lblDisplayUser)
-        Me.pnlSettings.Controls.Add(Me.GroupBox1)
-        Me.pnlSettings.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlSettings.GradientBottomLeft = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.pnlSettings.GradientBottomRight = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.pnlSettings.GradientTopLeft = System.Drawing.Color.LightSteelBlue
-        Me.pnlSettings.GradientTopRight = System.Drawing.Color.Lavender
-        Me.pnlSettings.Location = New System.Drawing.Point(0, 0)
-        Me.pnlSettings.Name = "pnlSettings"
-        Me.pnlSettings.Quality = 10
-        Me.pnlSettings.Size = New System.Drawing.Size(1035, 671)
-        Me.pnlSettings.TabIndex = 2
-        '
-        'btnExit
-        '
-        Me.btnExit.BackColor = System.Drawing.Color.Transparent
-        Me.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Lavender
-        Me.btnExit.FlatAppearance.BorderSize = 0
-        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.ForeColor = System.Drawing.Color.Indigo
-        Me.btnExit.Location = New System.Drawing.Point(979, 0)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(49, 30)
-        Me.btnExit.TabIndex = 31
-        Me.btnExit.Text = "X"
-        Me.btnExit.UseVisualStyleBackColor = False
-        '
         'frmSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -227,11 +245,12 @@ Partial Class frmSettings
         Me.Controls.Add(Me.pnlSettings)
         Me.Name = "frmSettings"
         Me.Text = "Account Settings"
+        Me.pnlSettings.ResumeLayout(False)
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgUsers, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlSettings.ResumeLayout(False)
-        Me.pnlSettings.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -250,4 +269,5 @@ Partial Class frmSettings
     Friend WithEvents lblDisplayUser As System.Windows.Forms.Label
     Friend WithEvents pnlSettings As Bunifu.Framework.UI.BunifuGradientPanel
     Friend WithEvents btnExit As System.Windows.Forms.Button
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
 End Class

@@ -112,21 +112,31 @@ Public Class frmStudProfile
         frmRegistration.txtUnits.Text = ""
 
         frmRegistration.txtStudentID.Focus()
-
+        frmRegistration.btnRegAdd.Text = "Save"
     End Sub
 
     Private Sub btnStudDelete_Click(sender As Object, e As EventArgs) Handles btnStudDelete.Click
-        Dim cmd As New OleDb.OleDbCommand("DELETE * from tblStudent WHERE student_ID = '" & dgStudent.CurrentRow.Cells(1).Value & "'", conn)
-        Dim msgSave = MsgBox("Are you sure you want to delete?", MsgBoxStyle.YesNo, "Confirm delete?")
-        If msgSave = MsgBoxResult.Yes Then
-            connect()
-            cmd.ExecuteNonQuery()
-        End If
-        'Deletes the photo ID of the student
-        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\StudentID\" & frmRegistration.txtStudentID.Text & ".jpg") = True Then
-            Kill(Application.StartupPath & "\StudentID\" & frmRegistration.txtStudentID.Text & ".jpg")
-        End If
-        loadStudents()
+        
+        Try
+            Dim cmd As New OleDb.OleDbCommand("DELETE * from tblStudent WHERE student_ID = '" & dgStudent.CurrentRow.Cells(1).Value & "'", conn)
+            Dim msgSave = MsgBox("Are you sure you want to delete?", MsgBoxStyle.YesNo, "Confirm delete?")
+            If msgSave = MsgBoxResult.Yes Then
+                connect()
+                cmd.ExecuteNonQuery()
+                'Deletes the photo ID of the student
+                If My.Computer.FileSystem.FileExists(Application.StartupPath & "\StudentID\" & frmRegistration.txtStudentID.Text & ".jpg") = True Then
+                    Kill(Application.StartupPath & "\StudentID\" & frmRegistration.txtStudentID.Text & ".jpg")
+                End If
+            End If
+            loadStudents()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            conn.Close()
+        End Try
+
+
+
     End Sub
 
     Private Sub dgStudent_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgStudent.CellEnter
@@ -202,7 +212,7 @@ Public Class frmStudProfile
             dgStudent.DataSource = dset.Tables("tblStudent").DefaultView
         End If
 
-
     End Sub
+
 
 End Class

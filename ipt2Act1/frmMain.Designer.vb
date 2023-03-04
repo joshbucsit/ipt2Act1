@@ -36,7 +36,7 @@ Partial Class frmMain
         '
         'pnlMain
         '
-        Me.pnlMain.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.pnlMain.BackColor = System.Drawing.Color.Silver
         Me.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlMain.Location = New System.Drawing.Point(225, 0)
         Me.pnlMain.Name = "pnlMain"

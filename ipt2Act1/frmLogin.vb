@@ -102,4 +102,12 @@ Public Class frmLogin
         txtPassword.PasswordChar = "*"
         PictureBox4.Image = Image.FromFile("hideneye.png")
     End Sub
+
+    Private Sub btnNewUser_Click(sender As Object, e As EventArgs) Handles btnNewUser.Click
+        MsgBox("Please contact the administrator!", MsgBoxStyle.OkOnly, "Information")
+    End Sub
+
+    Private Sub btnForgotPassword_Click(sender As Object, e As EventArgs) Handles btnForgotPassword.Click
+        MsgBox("Please contact the administrator!", MsgBoxStyle.Critical, "Information")
+    End Sub
 End Class

@@ -94,27 +94,55 @@ Public Class frmSettings
             btnDelete.Text = "Delete"
             disableInput()
         End If
+        conn.Close()
     End Sub
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
-        If btnDelete.Text = "Cancel" Then
-            clearInput()
-            btnDelete.Text = "Delete"
-            btnNew.Text = "New"
-            disableInput()
-        ElseIf btnDelete.Text = "Delete" Then
-            connect()
-            Dim cmd As New OleDbCommand("Delete * from tblUser where username='" & txtUsername.Text & "'", conn)
+        'If btnDelete.Text = "Cancel" Then
+        '    clearInput()
+        '    btnDelete.Text = "Delete"
+        '    btnNew.Text = "New"
+        '    disableInput()
+        'ElseIf btnDelete.Text = "Delete" Then
+        '    connect()
+        '    Dim cmd As New OleDbCommand("Delete * from tblUser where username='" & txtUsername.Text & "'", conn)
 
-            Dim msgSave = MsgBox("Are you sure you want to delete?", MsgBoxStyle.YesNo, "Confirm delete?")
-            If msgSave = MsgBoxResult.Yes Then
-                cmd.ExecuteNonQuery()
+        '    Dim msgSave = MsgBox("Are you sure you want to delete?", MsgBoxStyle.YesNo, "Confirm delete?")
+        '    If msgSave = MsgBoxResult.Yes Then
+        '        cmd.ExecuteNonQuery()
+        '    End If
+
+        '    loadUsers()
+        '    clearInput()
+        '    conn.Close()
+
+        'End If
+
+        Try
+            If btnDelete.Text = "Cancel" Then
+                clearInput()
+                btnDelete.Text = "Delete"
+                btnNew.Text = "New"
+                disableInput()
+            ElseIf btnDelete.Text = "Delete" Then
+                connect()
+                Dim cmd As New OleDbCommand("Delete * from tblUser where username='" & txtUsername.Text & "'", conn)
+
+                Dim msgSave = MsgBox("Are you sure you want to delete?", MsgBoxStyle.YesNo, "Confirm delete?")
+                If msgSave = MsgBoxResult.Yes Then
+                    cmd.ExecuteNonQuery()
+                End If
+
+                loadUsers()
+                clearInput()
+                conn.Close()
             End If
 
-            loadUsers()
-            clearInput()
-
-        End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            conn.Close()
+        End Try
     End Sub
 
     Private Sub dgUsers_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgUsers.CellContentClick
@@ -138,5 +166,10 @@ Public Class frmSettings
     
     Private Sub btnExit_MouseHover(sender As Object, e As EventArgs) Handles btnExit.MouseHover
         btnExit.BackColor = Color.Red
+    End Sub
+
+    
+    Private Sub btnExit_MouseLeave(sender As Object, e As EventArgs) Handles btnExit.MouseLeave
+        btnExit.BackColor = Color.Transparent
     End Sub
 End Class

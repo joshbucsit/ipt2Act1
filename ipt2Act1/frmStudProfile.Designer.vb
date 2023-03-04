@@ -24,24 +24,24 @@ Partial Class frmStudProfile
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmStudProfile))
         Me.pnlStudProfile = New Bunifu.Framework.UI.BunifuGradientPanel()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.lblDisplayUser = New System.Windows.Forms.Label()
+        Me.btnStudDelete = New System.Windows.Forms.Button()
+        Me.btnStudUpdate = New System.Windows.Forms.Button()
+        Me.btnStudAdd = New System.Windows.Forms.Button()
         Me.btnPrint = New System.Windows.Forms.Button()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.cbFilter = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.btnStudAdd = New System.Windows.Forms.Button()
-        Me.btnStudUpdate = New System.Windows.Forms.Button()
         Me.lblStatus = New System.Windows.Forms.Label()
-        Me.btnStudDelete = New System.Windows.Forms.Button()
-        Me.lblDisplayUser = New System.Windows.Forms.Label()
         Me.gbStudent = New System.Windows.Forms.GroupBox()
         Me.dgStudent = New System.Windows.Forms.DataGridView()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.pnlStudProfile.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.gbStudent.SuspendLayout()
         CType(Me.dgStudent, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlStudProfile
@@ -66,8 +66,83 @@ Partial Class frmStudProfile
         Me.pnlStudProfile.Location = New System.Drawing.Point(0, 0)
         Me.pnlStudProfile.Name = "pnlStudProfile"
         Me.pnlStudProfile.Quality = 10
-        Me.pnlStudProfile.Size = New System.Drawing.Size(1045, 664)
+        Me.pnlStudProfile.Size = New System.Drawing.Size(1033, 664)
         Me.pnlStudProfile.TabIndex = 3
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Indigo
+        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.lblDisplayUser)
+        Me.GroupBox1.Controls.Add(Me.btnStudDelete)
+        Me.GroupBox1.Controls.Add(Me.btnStudUpdate)
+        Me.GroupBox1.Controls.Add(Me.btnStudAdd)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 8)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(995, 92)
+        Me.GroupBox1.TabIndex = 41
+        Me.GroupBox1.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.BackgroundImage = Global.ipt2Act1.My.Resources.Resources.logout_indigo
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Indigo
+        Me.Button1.Location = New System.Drawing.Point(917, 13)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(71, 68)
+        Me.Button1.TabIndex = 35
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'lblDisplayUser
+        '
+        Me.lblDisplayUser.AutoSize = True
+        Me.lblDisplayUser.BackColor = System.Drawing.Color.Transparent
+        Me.lblDisplayUser.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDisplayUser.ForeColor = System.Drawing.Color.Lavender
+        Me.lblDisplayUser.Location = New System.Drawing.Point(13, 25)
+        Me.lblDisplayUser.Name = "lblDisplayUser"
+        Me.lblDisplayUser.Size = New System.Drawing.Size(164, 38)
+        Me.lblDisplayUser.TabIndex = 1
+        Me.lblDisplayUser.Text = "Welcome"
+        '
+        'btnStudDelete
+        '
+        Me.btnStudDelete.BackgroundImage = Global.ipt2Act1.My.Resources.Resources.delete_indigo
+        Me.btnStudDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnStudDelete.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnStudDelete.ForeColor = System.Drawing.Color.Lavender
+        Me.btnStudDelete.Location = New System.Drawing.Point(826, 13)
+        Me.btnStudDelete.Name = "btnStudDelete"
+        Me.btnStudDelete.Size = New System.Drawing.Size(85, 68)
+        Me.btnStudDelete.TabIndex = 32
+        Me.btnStudDelete.UseVisualStyleBackColor = True
+        '
+        'btnStudUpdate
+        '
+        Me.btnStudUpdate.BackgroundImage = Global.ipt2Act1.My.Resources.Resources.edit_indigo
+        Me.btnStudUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnStudUpdate.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnStudUpdate.ForeColor = System.Drawing.Color.Indigo
+        Me.btnStudUpdate.Location = New System.Drawing.Point(735, 13)
+        Me.btnStudUpdate.Name = "btnStudUpdate"
+        Me.btnStudUpdate.Size = New System.Drawing.Size(85, 68)
+        Me.btnStudUpdate.TabIndex = 33
+        Me.btnStudUpdate.UseVisualStyleBackColor = True
+        '
+        'btnStudAdd
+        '
+        Me.btnStudAdd.BackgroundImage = Global.ipt2Act1.My.Resources.Resources.add_indigo
+        Me.btnStudAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnStudAdd.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.btnStudAdd.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnStudAdd.ForeColor = System.Drawing.Color.Lavender
+        Me.btnStudAdd.Location = New System.Drawing.Point(644, 13)
+        Me.btnStudAdd.Name = "btnStudAdd"
+        Me.btnStudAdd.Size = New System.Drawing.Size(85, 68)
+        Me.btnStudAdd.TabIndex = 1
+        Me.btnStudAdd.UseVisualStyleBackColor = True
         '
         'btnPrint
         '
@@ -126,43 +201,6 @@ Partial Class frmStudProfile
         Me.Label1.Text = "Filtering Option:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Button1
-        '
-        Me.Button1.BackgroundImage = Global.ipt2Act1.My.Resources.Resources.logout_indigo
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Indigo
-        Me.Button1.Location = New System.Drawing.Point(926, 13)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(71, 68)
-        Me.Button1.TabIndex = 35
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'btnStudAdd
-        '
-        Me.btnStudAdd.BackgroundImage = Global.ipt2Act1.My.Resources.Resources.add_indigo
-        Me.btnStudAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnStudAdd.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
-        Me.btnStudAdd.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnStudAdd.ForeColor = System.Drawing.Color.Lavender
-        Me.btnStudAdd.Location = New System.Drawing.Point(653, 13)
-        Me.btnStudAdd.Name = "btnStudAdd"
-        Me.btnStudAdd.Size = New System.Drawing.Size(85, 68)
-        Me.btnStudAdd.TabIndex = 1
-        Me.btnStudAdd.UseVisualStyleBackColor = True
-        '
-        'btnStudUpdate
-        '
-        Me.btnStudUpdate.BackgroundImage = Global.ipt2Act1.My.Resources.Resources.edit_indigo
-        Me.btnStudUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnStudUpdate.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnStudUpdate.ForeColor = System.Drawing.Color.Indigo
-        Me.btnStudUpdate.Location = New System.Drawing.Point(744, 13)
-        Me.btnStudUpdate.Name = "btnStudUpdate"
-        Me.btnStudUpdate.Size = New System.Drawing.Size(85, 68)
-        Me.btnStudUpdate.TabIndex = 33
-        Me.btnStudUpdate.UseVisualStyleBackColor = True
-        '
         'lblStatus
         '
         Me.lblStatus.BackColor = System.Drawing.Color.Transparent
@@ -175,39 +213,15 @@ Partial Class frmStudProfile
         Me.lblStatus.Text = "Male: 0  | Female: 0 | Total: 0"
         Me.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'btnStudDelete
-        '
-        Me.btnStudDelete.BackgroundImage = Global.ipt2Act1.My.Resources.Resources.delete_indigo
-        Me.btnStudDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnStudDelete.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnStudDelete.ForeColor = System.Drawing.Color.Lavender
-        Me.btnStudDelete.Location = New System.Drawing.Point(835, 13)
-        Me.btnStudDelete.Name = "btnStudDelete"
-        Me.btnStudDelete.Size = New System.Drawing.Size(85, 68)
-        Me.btnStudDelete.TabIndex = 32
-        Me.btnStudDelete.UseVisualStyleBackColor = True
-        '
-        'lblDisplayUser
-        '
-        Me.lblDisplayUser.AutoSize = True
-        Me.lblDisplayUser.BackColor = System.Drawing.Color.Transparent
-        Me.lblDisplayUser.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDisplayUser.ForeColor = System.Drawing.Color.Lavender
-        Me.lblDisplayUser.Location = New System.Drawing.Point(13, 25)
-        Me.lblDisplayUser.Name = "lblDisplayUser"
-        Me.lblDisplayUser.Size = New System.Drawing.Size(164, 38)
-        Me.lblDisplayUser.TabIndex = 1
-        Me.lblDisplayUser.Text = "Welcome"
-        '
         'gbStudent
         '
-        Me.gbStudent.BackColor = System.Drawing.Color.Transparent
+        Me.gbStudent.BackColor = System.Drawing.Color.Indigo
         Me.gbStudent.Controls.Add(Me.dgStudent)
         Me.gbStudent.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbStudent.ForeColor = System.Drawing.Color.Indigo
-        Me.gbStudent.Location = New System.Drawing.Point(6, 101)
+        Me.gbStudent.ForeColor = System.Drawing.Color.Lavender
+        Me.gbStudent.Location = New System.Drawing.Point(12, 106)
         Me.gbStudent.Name = "gbStudent"
-        Me.gbStudent.Size = New System.Drawing.Size(1009, 508)
+        Me.gbStudent.Size = New System.Drawing.Size(995, 503)
         Me.gbStudent.TabIndex = 0
         Me.gbStudent.TabStop = False
         Me.gbStudent.Text = "Students Information"
@@ -217,24 +231,10 @@ Partial Class frmStudProfile
         Me.dgStudent.BackgroundColor = System.Drawing.Color.White
         Me.dgStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgStudent.GridColor = System.Drawing.Color.Indigo
-        Me.dgStudent.Location = New System.Drawing.Point(8, 23)
+        Me.dgStudent.Location = New System.Drawing.Point(11, 28)
         Me.dgStudent.Name = "dgStudent"
-        Me.dgStudent.Size = New System.Drawing.Size(993, 477)
+        Me.dgStudent.Size = New System.Drawing.Size(973, 463)
         Me.dgStudent.TabIndex = 0
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.BackColor = System.Drawing.Color.Indigo
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.lblDisplayUser)
-        Me.GroupBox1.Controls.Add(Me.btnStudDelete)
-        Me.GroupBox1.Controls.Add(Me.btnStudUpdate)
-        Me.GroupBox1.Controls.Add(Me.btnStudAdd)
-        Me.GroupBox1.Location = New System.Drawing.Point(6, 8)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1009, 92)
-        Me.GroupBox1.TabIndex = 41
-        Me.GroupBox1.TabStop = False
         '
         'frmStudProfile
         '
@@ -248,10 +248,10 @@ Partial Class frmStudProfile
         Me.Text = "frmStudProfile"
         Me.pnlStudProfile.ResumeLayout(False)
         Me.pnlStudProfile.PerformLayout()
-        Me.gbStudent.ResumeLayout(False)
-        CType(Me.dgStudent, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.gbStudent.ResumeLayout(False)
+        CType(Me.dgStudent, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

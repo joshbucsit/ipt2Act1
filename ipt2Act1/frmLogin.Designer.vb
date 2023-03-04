@@ -26,6 +26,7 @@ Partial Class frmLogin
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.pnlMainLogin = New Bunifu.Framework.UI.BunifuGradientPanel()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnNewUser = New System.Windows.Forms.Button()
@@ -40,6 +41,7 @@ Partial Class frmLogin
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.pnlMainLogin.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,6 +55,7 @@ Partial Class frmLogin
         '
         Me.pnlMainLogin.BackgroundImage = CType(resources.GetObject("pnlMainLogin.BackgroundImage"), System.Drawing.Image)
         Me.pnlMainLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pnlMainLogin.Controls.Add(Me.PictureBox5)
         Me.pnlMainLogin.Controls.Add(Me.PictureBox4)
         Me.pnlMainLogin.Controls.Add(Me.PictureBox1)
         Me.pnlMainLogin.Controls.Add(Me.btnNewUser)
@@ -77,6 +80,17 @@ Partial Class frmLogin
         Me.pnlMainLogin.Size = New System.Drawing.Size(995, 553)
         Me.pnlMainLogin.TabIndex = 1
         '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox5.Image = Global.ipt2Act1.My.Resources.Resources.wave1
+        Me.PictureBox5.Location = New System.Drawing.Point(0, 487)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(995, 66)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox5.TabIndex = 34
+        Me.PictureBox5.TabStop = False
+        '
         'PictureBox4
         '
         Me.PictureBox4.Image = Global.ipt2Act1.My.Resources.Resources.hideneyeblack
@@ -92,9 +106,9 @@ Partial Class frmLogin
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.Image = Global.ipt2Act1.My.Resources.Resources.bsitnewlogo
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 37)
+        Me.PictureBox1.Location = New System.Drawing.Point(33, 57)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(469, 474)
+        Me.PictureBox1.Size = New System.Drawing.Size(428, 383)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -190,7 +204,7 @@ Partial Class frmLogin
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnExit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.White
-        Me.btnExit.Location = New System.Drawing.Point(945, 4)
+        Me.btnExit.Location = New System.Drawing.Point(946, 0)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(49, 30)
         Me.btnExit.TabIndex = 30
@@ -205,7 +219,7 @@ Partial Class frmLogin
         Me.btnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogIn.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogIn.ForeColor = System.Drawing.Color.Indigo
-        Me.btnLogIn.Location = New System.Drawing.Point(636, 391)
+        Me.btnLogIn.Location = New System.Drawing.Point(636, 371)
         Me.btnLogIn.Name = "btnLogIn"
         Me.btnLogIn.Size = New System.Drawing.Size(213, 69)
         Me.btnLogIn.TabIndex = 29
@@ -262,6 +276,7 @@ Partial Class frmLogin
         Me.Text = "Log In"
         Me.pnlMainLogin.ResumeLayout(False)
         Me.pnlMainLogin.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -284,4 +299,5 @@ Partial Class frmLogin
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
 End Class

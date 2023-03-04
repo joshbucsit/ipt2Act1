@@ -60,6 +60,7 @@ Partial Class frmRegistration
         '
         'pnlRegister
         '
+        Me.pnlRegister.BackColor = System.Drawing.Color.Indigo
         Me.pnlRegister.BackgroundImage = CType(resources.GetObject("pnlRegister.BackgroundImage"), System.Drawing.Image)
         Me.pnlRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.pnlRegister.Controls.Add(Me.gbStudent)
@@ -67,10 +68,10 @@ Partial Class frmRegistration
         Me.pnlRegister.Controls.Add(Me.lblDisplayUser)
         Me.pnlRegister.Controls.Add(Me.btnExit)
         Me.pnlRegister.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlRegister.GradientBottomLeft = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(103, Byte), Integer))
-        Me.pnlRegister.GradientBottomRight = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(103, Byte), Integer))
-        Me.pnlRegister.GradientTopLeft = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.pnlRegister.GradientTopRight = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.pnlRegister.GradientBottomLeft = System.Drawing.Color.Indigo
+        Me.pnlRegister.GradientBottomRight = System.Drawing.Color.Indigo
+        Me.pnlRegister.GradientTopLeft = System.Drawing.Color.Indigo
+        Me.pnlRegister.GradientTopRight = System.Drawing.Color.Indigo
         Me.pnlRegister.Location = New System.Drawing.Point(0, 0)
         Me.pnlRegister.Name = "pnlRegister"
         Me.pnlRegister.Quality = 10
@@ -79,7 +80,7 @@ Partial Class frmRegistration
         '
         'gbStudent
         '
-        Me.gbStudent.BackColor = System.Drawing.Color.SlateBlue
+        Me.gbStudent.BackColor = System.Drawing.Color.LightSteelBlue
         Me.gbStudent.Controls.Add(Me.pbAddStudPhoto)
         Me.gbStudent.Controls.Add(Me.pbStudphoto)
         Me.gbStudent.Controls.Add(Me.txtCourse)
@@ -157,7 +158,7 @@ Partial Class frmRegistration
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.LavenderBlush
+        Me.Label1.ForeColor = System.Drawing.Color.Indigo
         Me.Label1.Location = New System.Drawing.Point(206, 42)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(107, 23)
@@ -209,8 +210,8 @@ Partial Class frmRegistration
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.Lavender
-        Me.Label10.Location = New System.Drawing.Point(698, 292)
+        Me.Label10.ForeColor = System.Drawing.Color.Indigo
+        Me.Label10.Location = New System.Drawing.Point(682, 292)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(107, 23)
         Me.Label10.TabIndex = 54
@@ -240,6 +241,7 @@ Partial Class frmRegistration
         Me.dtDoR.CalendarFont = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtDoR.CalendarForeColor = System.Drawing.Color.Indigo
         Me.dtDoR.CalendarTitleForeColor = System.Drawing.Color.Indigo
+        Me.dtDoR.CalendarTrailingForeColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.dtDoR.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtDoR.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtDoR.Location = New System.Drawing.Point(402, 292)
@@ -252,7 +254,7 @@ Partial Class frmRegistration
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Lavender
+        Me.Label2.ForeColor = System.Drawing.Color.Indigo
         Me.Label2.Location = New System.Drawing.Point(206, 102)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(99, 23)
@@ -264,7 +266,7 @@ Partial Class frmRegistration
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Lavender
+        Me.Label8.ForeColor = System.Drawing.Color.Indigo
         Me.Label8.Location = New System.Drawing.Point(202, 290)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(194, 23)
@@ -289,9 +291,9 @@ Partial Class frmRegistration
         Me.cbSection.ForeColor = System.Drawing.Color.Indigo
         Me.cbSection.FormattingEnabled = True
         Me.cbSection.Items.AddRange(New Object() {"A", "B", "C", "D", "E"})
-        Me.cbSection.Location = New System.Drawing.Point(1067, 228)
+        Me.cbSection.Location = New System.Drawing.Point(1031, 228)
         Me.cbSection.Name = "cbSection"
-        Me.cbSection.Size = New System.Drawing.Size(108, 27)
+        Me.cbSection.Size = New System.Drawing.Size(144, 27)
         Me.cbSection.TabIndex = 8
         '
         'txtFullname
@@ -317,8 +319,8 @@ Partial Class frmRegistration
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Lavender
-        Me.Label7.Location = New System.Drawing.Point(973, 224)
+        Me.Label7.ForeColor = System.Drawing.Color.Indigo
+        Me.Label7.Location = New System.Drawing.Point(948, 228)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(88, 23)
         Me.Label7.TabIndex = 48
@@ -329,7 +331,7 @@ Partial Class frmRegistration
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.Lavender
+        Me.Label9.ForeColor = System.Drawing.Color.Indigo
         Me.Label9.Location = New System.Drawing.Point(206, 165)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(85, 23)
@@ -342,9 +344,9 @@ Partial Class frmRegistration
         Me.cbYear.ForeColor = System.Drawing.Color.Indigo
         Me.cbYear.FormattingEnabled = True
         Me.cbYear.Items.AddRange(New Object() {"1", "2", "3", "4"})
-        Me.cbYear.Location = New System.Drawing.Point(851, 228)
+        Me.cbYear.Location = New System.Drawing.Point(777, 228)
         Me.cbYear.Name = "cbYear"
-        Me.cbYear.Size = New System.Drawing.Size(108, 27)
+        Me.cbYear.Size = New System.Drawing.Size(165, 27)
         Me.cbYear.TabIndex = 7
         '
         'Label3
@@ -352,7 +354,7 @@ Partial Class frmRegistration
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Lavender
+        Me.Label3.ForeColor = System.Drawing.Color.Indigo
         Me.Label3.Location = New System.Drawing.Point(682, 42)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(89, 23)
@@ -364,8 +366,8 @@ Partial Class frmRegistration
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Lavender
-        Me.Label6.Location = New System.Drawing.Point(773, 224)
+        Me.Label6.ForeColor = System.Drawing.Color.Indigo
+        Me.Label6.Location = New System.Drawing.Point(682, 228)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(58, 23)
         Me.Label6.TabIndex = 46
@@ -379,6 +381,7 @@ Partial Class frmRegistration
         Me.txtAddress.Location = New System.Drawing.Point(777, 42)
         Me.txtAddress.Multiline = True
         Me.txtAddress.Name = "txtAddress"
+        Me.txtAddress.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.txtAddress.Size = New System.Drawing.Size(398, 100)
         Me.txtAddress.TabIndex = 3
         '
@@ -405,7 +408,7 @@ Partial Class frmRegistration
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Lavender
+        Me.Label4.ForeColor = System.Drawing.Color.Indigo
         Me.Label4.Location = New System.Drawing.Point(682, 165)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(79, 23)
@@ -417,7 +420,7 @@ Partial Class frmRegistration
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Lavender
+        Me.Label5.ForeColor = System.Drawing.Color.Indigo
         Me.Label5.Location = New System.Drawing.Point(202, 228)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(125, 23)
@@ -438,11 +441,11 @@ Partial Class frmRegistration
         Me.lblDisplayUser.BackColor = System.Drawing.Color.Transparent
         Me.lblDisplayUser.Font = New System.Drawing.Font("Century Gothic", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDisplayUser.ForeColor = System.Drawing.Color.Lavender
-        Me.lblDisplayUser.Location = New System.Drawing.Point(440, 23)
+        Me.lblDisplayUser.Location = New System.Drawing.Point(387, 23)
         Me.lblDisplayUser.Name = "lblDisplayUser"
-        Me.lblDisplayUser.Size = New System.Drawing.Size(235, 41)
+        Me.lblDisplayUser.Size = New System.Drawing.Size(426, 41)
         Me.lblDisplayUser.TabIndex = 34
-        Me.lblDisplayUser.Text = "Add Student "
+        Me.lblDisplayUser.Text = "Add Student Information"
         '
         'btnExit
         '

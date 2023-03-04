@@ -8,9 +8,8 @@ Public Class frmRegistration
     End Sub
 
     Private Sub btnRegAdd_Click(sender As Object, e As EventArgs) Handles btnRegAdd.Click
-
         yearNSection = cbYear.Text + cbSection.Text
-        If btnRegAdd.Text = "Add" Then
+        If btnRegAdd.Text = "Save" Then
             Dim cmd As New OleDb.OleDbCommand("INSERT INTO tblStudent ([student_ID], [fullname], [address], [gender], [coursemajor], [schoolyear], [yearNsection], [dateOfRegistration], [totalUnits]) VALUES (@student_ID, @fullname, @address, @gender, @coursemajor, @schoolyear, @yearNsection, @dateOfRegistration, @totalUnits)", conn)
 
             Dim dt As New DataTable
@@ -42,7 +41,7 @@ Public Class frmRegistration
 
             End If
 
-           
+
 
             conn.Close()
 
@@ -77,7 +76,7 @@ Public Class frmRegistration
 
                     Me.Close()
 
-                   
+
                     conn.Close()
                 End If
 
@@ -100,6 +99,7 @@ Public Class frmRegistration
         frmMain.Enabled = False
         Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         Me.pnlRegister.BorderStyle = BorderStyle.FixedSingle
+        Me.pnlRegister.BackColor = Color.Indigo
 
     End Sub
 
@@ -132,4 +132,6 @@ Public Class frmRegistration
     Private Sub btnExit_MouseLeave(sender As Object, e As EventArgs) Handles btnExit.MouseLeave
         btnExit.BackColor = Color.Transparent
     End Sub
+
+
 End Class

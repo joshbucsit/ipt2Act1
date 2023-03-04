@@ -8,7 +8,6 @@ Public Class frmMain
 
     Private Sub btnDashboard_MouseLeave(sender As Object, e As EventArgs) Handles btnDashboard.MouseLeave
         btnDashboard.BackColor = Color.Transparent
-
     End Sub
 
     Private Sub btnStudentProfile_MouseHover(sender As Object, e As EventArgs) Handles btnStudentProfile.MouseHover
@@ -46,11 +45,6 @@ Public Class frmMain
         frmLogin.txtPassword.Text = ""
     End Sub
 
-    Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
-
-    End Sub
-
-   
     Private Sub btnSettings_Click(sender As Object, e As EventArgs) Handles btnSettings.Click
         pnlMain.Controls.Clear()
         frmSettings.TopLevel = False
